@@ -1,3 +1,7 @@
+language: ruby
+rvm:
+ - 2.2
+ - jruby
 deploy:
   provider: script
   script: bash deploy.sh

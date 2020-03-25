@@ -1,9 +1,3 @@
----
-layout: page
-title: "Gsuite návod"
-permalink: /gsuite-návod
----
-
 ## Úvod
 
 **Obsah**

@@ -1,9 +1,3 @@
----
-layout: page
-title: "Checklist"
-permalink: /checklist
----
-
 ## Onboarding
 
 - [ ] Škola má jasno v technologiích - tedy v těch, které chce nebo musí používat

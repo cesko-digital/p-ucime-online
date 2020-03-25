@@ -1,50 +1,43 @@
 ---
 layout: page
-title: "Home"
+title: "README"
 permalink: /index
 ---
 
-[Dočasná knowledge base](https://github.com/covid19cz/p-skola-online/wiki/)
+# Wiki projektu ceko.digital p-ucime-online
 
-### Jak přispět
+Wiki je udržováná pomocí standardní GitHub wiki na adrese
 
-1. registrujete se na [GitHUB](https://github.com/)
-2. pošlete svůj github login na jachym.cepicky gmail com nebo na `slack.cesko.digital` nebo na slack `Covid19cz` - hledejte `Jáchym`
+https://github.com/cesko-digital/p-ucime-online/wiki/
 
-Hlavní stránka: https://ucimeonline.cz
+Pro její publikaci na https://wiki.ucimeonline.cz je ale potřeba udělat několik
+kroků.
 
-![Schema zapojení](images/p-skola-online-infrastruktura.png)
+## Publikace
 
-## Komunikace dobrovolníků
-* Slack [cesko.digital](https://slack.cesko.digital/), kanály ~~`#p-skola-online`~~ -> `p-ucime-online` a `#p-skola-online-gug`
-* Google Meet - každý den 19 hod link na `#p-ucime-online`
-* [Trello](https://trello.com/b/EgJhLNgr/u%C4%8D%C3%ADme-online-popt%C3%A1vky)
-* [Motivační dopis ředitelům a zřizovatelům](https://docs.google.com/document/d/12e-mpfJgZnIIj0nevU0Lok0A2TGfZAFNQM0Cg34haOM/edit) (v procesu)
-* [Dobrovolnické workflow](Workflow)
+1. vyklonovat repo `p-ucime-online.wiki`
+   ```
+   git clone https://github.com/cesko.digital/p-ucime-online.wiki.git
+   cd p-ucime-online.wiki
+   ```
 
-## Onboarding nových škol
+2. Přidat substree `p-ucime-online` repa
+   ```
+   git submodule add -b gh-pages https://github.com/cesko.digital/p-ucime-online.git
+   ```
 
-* [Formulář pro registgraci nové školy](https://docs.google.com/forms/d/e/1FAIpQLSfEF7WHQkDQwUUsq9r2guErr6Jf_r7tqJIdEf7C0FAKVEp2-A/viewform?hl=cz)
-* [Dashboard s přehledem stavu](https://docs.google.com/forms/d/1rYHC0T9QhuKZcXgL65qdIFgWi0w9gMurmms1XwSyI-s/viewform?hl=cz&edit_requested=true)
-* Přebírání ticketů: Slack [cesko.digital](https://slack.cesko.digital/), kanál `#p-skola-online-gug`
+3. Pustit skript, který vstupní wiki `*.md` soubory překopíruje jako výstupní
+   `*.markdown` soubory (viz `wiki2gh-pages.py --help`)
 
-## Technická pomoc
+   ```
+   python3 wiki2gh-pages.py --source . --target p-ucime-online/ --dirs images/
+   ```
 
-* [Google a Gsuite](google-gsuite)
-* [Microsoft a Teams](microsoft-teams)
-* [Otevřený software](oss)
-* [Checklist](checklist) - co je potřeba mít pořešeno
-* [Janek Wágner a jeho postřehy](wagner)
+4. Nahrát změny do `p-ucime-online` vypublikované wiki "pro lidi"
 
+    ```
+    cd p-ucime-online
+    git commit -m"update 2020-02-12" -a
+    git push
+    ```
 
-## Pomoc s obsahem
-* [Základní školy](zakladni-skoly)
-* [Střední školy](stredni-skoly)
-
-## Další zdroje
-* [Webinář digitálních lektorů](https://digitalnilektori.cz/webinar) (Webinář)
-
-## GDPR
-
-* [Souhlas zákonného zástupce](https://docs.google.com/document/d/18Wfes921pORz2XH2D3EFL444k_zAZ1ZWskAoMYT9IS4/edit) (Google docs)
-* [GDPR vs. online vzdělávání](https://docs.google.com/document/d/1-hxyEgYBJimpOk0sH2xQAxfNYGTEEh5eUQx-Uj14uFA/edit) (Google docs)

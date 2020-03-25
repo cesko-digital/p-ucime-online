@@ -1,9 +1,3 @@
----
-layout: page
-title: "oss"
-permalink: /oss
----
-
 # Otevřený software pro online výuku
 
 https://www.goodfirms.co/blog/the-9-best-free-and-open-source-digital-classroom-management-software

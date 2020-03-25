@@ -13,16 +13,16 @@ before_install:
   - sudo apt-get update
 
 script:
-  - git clone https://github.com/p-ucime-online-wiki.git wiki
+  - git clone https://github.com/cesko-digital/p-ucime-online.wiki.git wiki
   - cd wiki
-  - git submodule init
-  - git submodule update 
-  - python3 wiki2gh-pages.py --source . --target p-ucime-online --dirs images
-  - cd p-ucime-online
-  - git add *
-  - git add images/*
-  - git commit -m"updating to date `date`"
-  - git push
-on:
-  branch: gh-pages
+  - python3 wiki2gh-pages.py --source . --target .. --dirs images
+  - cd ..
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: master
 

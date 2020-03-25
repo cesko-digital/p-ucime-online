@@ -1,0 +1,4 @@
+[submodule "p-ucime-online"]
+	path = p-ucime-online
+	url = ssh://git@github.com/cesko-digital/p-ucime-online.git
+	branch = gh-pages

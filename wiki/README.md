@@ -1,9 +1,3 @@
----
-layout: page
-title: "README"
-permalink: /readme_wiki
----
-
 # Wiki projektu ceko.digital p-ucime-online
 
 Wiki je udržováná pomocí standardní GitHub wiki na adrese

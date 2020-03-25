@@ -15,28 +15,26 @@ kroků.
 
 ## Publikace
 
+V repozitáři `p-ucime-online` pracovat na větvi `gh-pages`
+
 1. vyklonovat repo `p-ucime-online.wiki`
    ```
    git clone https://github.com/cesko.digital/p-ucime-online.wiki.git
    cd p-ucime-online.wiki
    ```
 
-2. Přidat substree `p-ucime-online` repa
-   ```
-   git submodule add -b gh-pages https://github.com/cesko.digital/p-ucime-online.git
-   ```
-
-3. Pustit skript, který vstupní wiki `*.md` soubory překopíruje jako výstupní
+2. Pustit skript, který vstupní wiki `*.md` soubory překopíruje jako výstupní
    `*.markdown` soubory (viz `wiki2gh-pages.py --help`)
 
    ```
-   python3 wiki2gh-pages.py --source . --target p-ucime-online/ --dirs images/
+   python3 wiki2gh-pages.py --source . --target ../p-ucime-online/ --dirs images/
    ```
 
 4. Nahrát změny do `p-ucime-online` vypublikované wiki "pro lidi"
 
     ```
-    cd p-ucime-online
+    cd ../p-ucime-online
+    git add *
     git commit -m"update 2020-02-12" -a
     git push
     ```

@@ -13,7 +13,6 @@ before_install:
   - sudo apt-get update
 
 script:
-  - git checkout gh-pages
   - git clone https://github.com/cesko-digital/p-ucime-online.wiki.git wiki
   - cd wiki
   - python3 wiki2gh-pages.py --source . --target .. --dirs images

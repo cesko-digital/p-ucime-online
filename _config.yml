@@ -1,6 +1,5 @@
 theme: just-the-docs
 remote_theme: pmarsceill/just-the-docs
-exclude: ['README.md', 'Gemfile.lock', 'Gemfile']
 readme_index:
   enabled:          false
   remove_originals: false
